@@ -53,6 +53,12 @@ esNutritivo2(Bioma):-
     Cantidad > 2,
     planta(Ingrediente).
 
+esNutritivo3(Bioma):-
+    contiene(Bioma, Ingrediente, _),
+    contiene(Bioma, OtroIngrediente, _),
+    algunoEsPlanta(Ingrediente, OtroIngrediente),
+    Ingrediente \= OtroIngrediente.
+
 /*3) Si bien pepita no va a llegar a la fiesta, nos interesa saber el camino que va a recorrer desde
 el norte hacia acá
 
